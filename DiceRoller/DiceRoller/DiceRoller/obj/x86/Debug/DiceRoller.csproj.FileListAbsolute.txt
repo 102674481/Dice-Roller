@@ -1,0 +1,6 @@
+/home/phillip/OneDrive/repo/DiceRoller/DiceRoller/DiceRoller/bin/Debug/DiceRoller.exe
+/home/phillip/OneDrive/repo/DiceRoller/DiceRoller/DiceRoller/bin/Debug/DiceRoller.pdb
+/home/phillip/OneDrive/repo/DiceRoller/DiceRoller/DiceRoller/obj/x86/Debug/DiceRoller.csprojAssemblyReference.cache
+/home/phillip/OneDrive/repo/DiceRoller/DiceRoller/DiceRoller/obj/x86/Debug/DiceRoller.csproj.CoreCompileInputs.cache
+/home/phillip/OneDrive/repo/DiceRoller/DiceRoller/DiceRoller/obj/x86/Debug/DiceRoller.exe
+/home/phillip/OneDrive/repo/DiceRoller/DiceRoller/DiceRoller/obj/x86/Debug/DiceRoller.pdb
