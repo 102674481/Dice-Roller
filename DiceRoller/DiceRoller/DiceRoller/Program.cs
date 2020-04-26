@@ -87,6 +87,31 @@ namespace DiceRoller
 
         }
 
+        public static void GameLogic() 
+        {
+            Dice Dice = new Dice();
+            int result, result2;
+            Random rnd = new Random();
+            result = rnd.Next(1, 7);
+            result2 = rnd.Next(1, 7);
+            if (result > result2)
+            {
+                Console.WriteLine("You win");
+            }
+            else if (result < result2)
+            {
+                Console.WriteLine("You lose");
+            }
+            else
+            {
+                Console.WriteLine("Its a draw");
+            }
+            Console.WriteLine("Your dice face value:" + result);
+            Dice.Draw(result);
+            Console.WriteLine("Computer's dice face value:" + result2);
+            Dice.Draw(result2);
+        }
+
         public static void Main(string[] args)
         {
 
@@ -94,16 +119,20 @@ namespace DiceRoller
             bool run = true;
             string option;
             int choice = 2;
-            Console.Write("Would you like to play a game or roll dice?, 1 for game and 2 for rolling dice?");
+            Console.Write("Would you like to play a game or roll dice?, 1 for game and 2 for rolling dice?\nEnter Selection:");
            
             choice  = Convert.ToInt16(Console.ReadLine());
             while (run)
             {
 
-                if(choice == 2)
-                DiceLogic();
 
-                Console.Write("again? (type no to quit)");
+                if (choice == 1)
+                    GameLogic();
+
+                if(choice == 2)
+                    DiceLogic();
+
+                Console.Write("again? (type no to quit)\nSelection:");
                 option = Console.ReadLine();
                 run = !option.Contains("n");
                 if (!run)
