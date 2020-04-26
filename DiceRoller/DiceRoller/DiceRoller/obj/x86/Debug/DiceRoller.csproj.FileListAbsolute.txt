@@ -4,3 +4,9 @@
 /home/phillip/OneDrive/repo/DiceRoller/DiceRoller/DiceRoller/obj/x86/Debug/DiceRoller.csproj.CoreCompileInputs.cache
 /home/phillip/OneDrive/repo/DiceRoller/DiceRoller/DiceRoller/obj/x86/Debug/DiceRoller.exe
 /home/phillip/OneDrive/repo/DiceRoller/DiceRoller/DiceRoller/obj/x86/Debug/DiceRoller.pdb
+/home/phillip/OneDrive/Uni/Year3/Semester1/SWE20001/Dice-Roller/DiceRoller/DiceRoller/DiceRoller/bin/Debug/DiceRoller.exe
+/home/phillip/OneDrive/Uni/Year3/Semester1/SWE20001/Dice-Roller/DiceRoller/DiceRoller/DiceRoller/bin/Debug/DiceRoller.pdb
+/home/phillip/OneDrive/Uni/Year3/Semester1/SWE20001/Dice-Roller/DiceRoller/DiceRoller/DiceRoller/obj/x86/Debug/DiceRoller.csprojAssemblyReference.cache
+/home/phillip/OneDrive/Uni/Year3/Semester1/SWE20001/Dice-Roller/DiceRoller/DiceRoller/DiceRoller/obj/x86/Debug/DiceRoller.csproj.CoreCompileInputs.cache
+/home/phillip/OneDrive/Uni/Year3/Semester1/SWE20001/Dice-Roller/DiceRoller/DiceRoller/DiceRoller/obj/x86/Debug/DiceRoller.exe
+/home/phillip/OneDrive/Uni/Year3/Semester1/SWE20001/Dice-Roller/DiceRoller/DiceRoller/DiceRoller/obj/x86/Debug/DiceRoller.pdb

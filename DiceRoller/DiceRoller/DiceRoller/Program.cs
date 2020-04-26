@@ -5,6 +5,7 @@ namespace DiceRoller
     class MainClass
     {
 
+        #region DrawingFace
         public void draw(int result)
         {
             switch (result)
@@ -56,6 +57,7 @@ namespace DiceRoller
                     break;
             }
         }
+        #endregion
 
         public static void Main(string[] args)
         {
