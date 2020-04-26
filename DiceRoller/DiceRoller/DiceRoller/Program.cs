@@ -10,54 +10,42 @@ namespace DiceRoller
         {
             bool[,] FaceMat = new bool[3,3];
 
-
+            FaceMat[2, 2] = true;
+            FaceMat[0, 0] = true;
             switch (result)
             {
                 case 1:
                     FaceMat[1, 1] = true;
+                    FaceMat[2, 2] = false;
+                    FaceMat[0, 0] = false;
 
                     break;
-                case 2:
-                    FaceMat[1, 0] = true;
-                    FaceMat[2, 2] = true;
-
-                    break;
-                case 3:
-                    FaceMat[0, 0] = true;
-                    FaceMat[1, 1] = true;
-                    FaceMat[2, 2] = true;
-
-
-                    break;
+                case 2: break;
+                case 3: FaceMat[1, 1] = true;break;
                 case 4:
-                    FaceMat[0, 0] =true;
                     FaceMat[0, 2]= true;
                     FaceMat[2, 0]= true;
-                    FaceMat[2, 2]= true;
+                    FaceMat[1, 1] = false;
 
                     break;
                 case 5:
-                    FaceMat[0, 0] = true;
                     FaceMat[0, 2] = true;
                     FaceMat[1, 1] = true;
                     FaceMat[2, 0] = true;
-                    FaceMat[2, 2] = true;
 
 
                     break;
                 case 6:
-                    FaceMat[0, 0] = true;
                     FaceMat[0, 2] = true;
                     FaceMat[1, 0] = true;
                     FaceMat[1, 2] = true;
                     FaceMat[2, 0] = true;
-                    FaceMat[2, 2] = true;
 
                     break;
             }
-            Console.WriteLine("---------\n-{0}     {1}-\n-{2}  {3}  {4}-\n-{5}     {6}-" 
-            //Console.WriteLine("---------");
-            ,(FaceMat[0, 0] ? "O" : " ")
+            Console.WriteLine("---------\n-{0}     {1}-\n-{2}  {3}  {4}-\n-{5}     {6}-\n---------"
+            
+            , (FaceMat[0, 0] ? "O" : " ")
             ,(FaceMat[0, 2] ? "O" : " ")
             ,(FaceMat[1, 0] ? "O" : " ")
             ,(FaceMat[1, 1] ? "O" : " ")
