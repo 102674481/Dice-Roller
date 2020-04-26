@@ -71,9 +71,13 @@ namespace DiceRoller
             string option;
             bool run = true;
             int num;
+            int choice = 2;
+            Console.Write("Would you like to play a game or roll dice?, 1 for game and 2 for rolling dice?");
+           
+            choice  = Convert.ToInt16(Console.ReadLine());
             while (run)
             {
-                Console.WriteLine("How many dice?");
+                Console.Write("How many dice:");
                 num = Convert.ToInt32(Console.ReadLine());
 
                 for (int i = 0; i < num; i++)
