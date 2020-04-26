@@ -214,18 +214,10 @@ namespace DiceRoller
             Random rnd = new Random();
             result = rnd.Next(1, 7);
             result2 = rnd.Next(1, 7);
-            if (result > result2)
-            {
-                Console.WriteLine("You win");
-            }
-            else if (result < result2)
-            {
-                Console.WriteLine("You lose");
-            }
-            else
-            {
+            Console.WriteLine((result > result2) ? "You win" : "You lose");
+            if (result == result2)
                 Console.WriteLine("Its a draw");
-            }
+
             Console.WriteLine("Your dice face value:" + result);
             Dice.Draw(result);
             Console.WriteLine("Computer's dice face value:" + result2);
