@@ -167,17 +167,17 @@ namespace DiceRoller
                         Console.WriteLine("WIN!!!");
 
 
-                        Console.WriteLine("  *   *                    *****");
-                        Console.WriteLine("    *                      *****");
-                        Console.WriteLine("***   ***                  *****");
+                        Console.WriteLine("  *   *                    *****\n" +
+                                          "    *                      *****\n" +
+                                          "***   ***                  *****");
                     }
                     else if (input == "paper")
                     {
                         Console.WriteLine("LOSE!!!");
 
-                        Console.WriteLine("  *   *                    * * *");
-                        Console.WriteLine("    *                      *   *");
-                        Console.WriteLine("***   ***                  * * *");
+                        Console.WriteLine("  *   *                    * * *\n"
+                                         +"    *                      *   *\n"
+                                         +"***   ***                  * * *");
                     }
 
                     Console.WriteLine("{0}", gamerandom);
