@@ -2,11 +2,11 @@
 
 namespace DiceRoller
 {
-    class MainClass
-    {
 
+    class Dice
+     {
         #region DrawingFace
-        public void draw(int result)
+        public void Draw(int result)
         {
             switch (result)
             {
@@ -57,7 +57,13 @@ namespace DiceRoller
                     break;
             }
         }
+
         #endregion
+    }
+    class MainClass
+    {
+
+
 
         public static void Main(string[] args)
         {
@@ -72,10 +78,10 @@ namespace DiceRoller
 
                 for (int i = 0; i < num; i++)
                 {
-                    MainClass p = new MainClass();
+                    Dice Dice = new Dice();
                     int result = rnd.Next(1, 7);
                     Console.WriteLine("Dice face value:" + result);
-                    p.draw(result);
+                    Dice.Draw(result);
                 }
                     Console.Write("Roll again? (type no to quit)");
                     option = Console.ReadLine();
