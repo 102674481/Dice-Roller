@@ -8,54 +8,62 @@ namespace DiceRoller
         #region DrawingFace
         public void Draw(int result)
         {
+            bool[,] FaceMat = new bool[3,3];
+
+
             switch (result)
             {
                 case 1:
-                    Console.WriteLine("---------");
-                    Console.WriteLine("-\t-");
-                    Console.WriteLine("-   O   -");
-                    Console.WriteLine("-\t-");
-                    Console.WriteLine("---------");
+                    FaceMat[1, 1] = true;
+
                     break;
                 case 2:
-                    Console.WriteLine("---------");
-                    Console.WriteLine("-O      -");
-                    Console.WriteLine("-\t-");
-                    Console.WriteLine("-      O-");
-                    Console.WriteLine("---------");
+                    FaceMat[1, 0] = true;
+                    FaceMat[2, 2] = true;
+
                     break;
                 case 3:
-                    Console.WriteLine("---------");
-                    Console.WriteLine("-O      -");
-                    Console.WriteLine("-   O   -");
-                    Console.WriteLine("-      O-");
-                    Console.WriteLine("---------");
+                    FaceMat[0, 0] = true;
+                    FaceMat[1, 1] = true;
+                    FaceMat[2, 2] = true;
+
 
                     break;
                 case 4:
-                    Console.WriteLine("---------");
-                    Console.WriteLine("-O     O-");
-                    Console.WriteLine("-       -");
-                    Console.WriteLine("-O     O-");
-                    Console.WriteLine("---------");
+                    FaceMat[0, 0] =true;
+                    FaceMat[0, 2]= true;
+                    FaceMat[2, 0]= true;
+                    FaceMat[2, 2]= true;
+
                     break;
                 case 5:
-                    Console.WriteLine("---------");
-                    Console.WriteLine("-O     O-");
-                    Console.WriteLine("-   O   -");
-                    Console.WriteLine("-O     O-");
-                    Console.WriteLine("---------");
+                    FaceMat[0, 0] = true;
+                    FaceMat[0, 2] = true;
+                    FaceMat[1, 1] = true;
+                    FaceMat[2, 0] = true;
+                    FaceMat[2, 2] = true;
+
 
                     break;
                 case 6:
-                    Console.WriteLine("---------");
-                    Console.WriteLine("-O     O-");
-                    Console.WriteLine("-O     O-");
-                    Console.WriteLine("-O     O-");
-                    Console.WriteLine("---------");
+                    FaceMat[0, 0] = true;
+                    FaceMat[0, 2] = true;
+                    FaceMat[1, 0] = true;
+                    FaceMat[1, 2] = true;
+                    FaceMat[2, 0] = true;
+                    FaceMat[2, 2] = true;
 
                     break;
             }
+            Console.WriteLine("---------\n-{0}     {1}-\n-{2}  {3}  {4}-\n-{5}     {6}-" 
+            //Console.WriteLine("---------");
+            ,(FaceMat[0, 0] ? "O" : " ")
+            ,(FaceMat[0, 2] ? "O" : " ")
+            ,(FaceMat[1, 0] ? "O" : " ")
+            ,(FaceMat[1, 1] ? "O" : " ")
+            ,(FaceMat[1, 2] ? "O" : " ")
+            ,(FaceMat[2, 0] ? "O" : " ")
+            ,(FaceMat[2, 2] ? "O" : " "));
         }
 
         #endregion
@@ -70,8 +78,7 @@ namespace DiceRoller
         public static void Rockgame()
         {
             string input;
-            string pcinput;
-
+            string pcinput = ""; pcinput.Trim(); // removes compiler Warning
             Console.WriteLine("rock, paper, scissor");
             input = Console.ReadLine();
 
@@ -191,7 +198,7 @@ namespace DiceRoller
         public static void DiceLogic() 
         {
             Random rnd = new Random();
-            int num;
+            int num =2;
 
             Console.Write("How many dice:");
             num = Convert.ToInt32(Console.ReadLine());
