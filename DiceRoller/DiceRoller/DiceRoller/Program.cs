@@ -67,6 +67,126 @@ namespace DiceRoller
     class MainClass
   
     {
+        public static void Rockgame()
+        {
+            string input;
+            string pcinput;
+
+            Console.WriteLine("rock, paper, scissor");
+            input = Console.ReadLine();
+
+            // int inputnumber = Convert.ToInt32(input);
+
+
+            // Console.WriteLine("your input = {0} ", inputnumber);
+
+            Random random = new Random();
+            int gamerandom = random.Next(1, 4);
+
+            switch (gamerandom)
+            {
+                case 1:
+                    pcinput = "rock";
+                    Console.WriteLine("cpu choose Rock");
+                    //int inputcpu = Convert.ToInt32(pcinput);
+                    if (input == "rock")
+                    {
+                        Console.WriteLine("DRAW!!!");
+
+                        Console.WriteLine("*****                *****");
+                        Console.WriteLine("*****       ---      *****");
+                        Console.WriteLine("*****                *****");
+
+                    }
+                    else if (input == "paper")
+                    {
+                        Console.WriteLine("WIN!!!");
+
+                        Console.WriteLine("****                * * *");
+                        Console.WriteLine("****     ---        *   *");
+                        Console.WriteLine("****                * * *");
+                    }
+                    else if (input == "scissor")
+                    {
+                        Console.WriteLine("LOSE!!!");
+
+                        Console.WriteLine("*****                *   *  ");
+                        Console.WriteLine("*****    ---           *    ");
+                        Console.WriteLine("*****              ***   ***");
+                    }
+
+                    Console.WriteLine("{0}", gamerandom);
+
+                    break;
+
+                case 2:
+                    pcinput = "paper";
+                    Console.WriteLine("cpu choose paper");
+                    if (input == "paper")
+                    {
+                        Console.WriteLine("DRAW!!!");
+
+                        Console.WriteLine("* * *               * * *");
+                        Console.WriteLine("*   *    ---        *   *");
+                        Console.WriteLine("* * *               * * *");
+                    }
+                    else if (input == "rock")
+                    {
+                        Console.WriteLine("LOSE!!!");
+
+                        Console.WriteLine("* * *               *****");
+                        Console.WriteLine("*   *    ---        *****");
+                        Console.WriteLine("* * *               *****");
+
+                    }
+                    else if (input == "scissor")
+                    {
+                        Console.WriteLine("WIN!!!");
+
+                        Console.WriteLine("* * *                *   *  ");
+                        Console.WriteLine("*   *    ---           *    ");
+                        Console.WriteLine("* * *              ***   ***");
+                    }
+
+                    Console.WriteLine("{0}", gamerandom);
+                    break;
+
+                case 3:
+                    pcinput = "scissor";
+                    Console.WriteLine("cpu choose scissor");
+                    if (input == "scissor")
+                    {
+                        Console.WriteLine("DRAW!!!");
+
+                        Console.WriteLine("  *   *                      *   *  ");
+                        Console.WriteLine("    *                          *    ");
+                        Console.WriteLine("***   ***                  ***   ***");
+                    }
+                    else if (input == "rock")
+                    {
+                        Console.WriteLine("WIN!!!");
+
+
+                        Console.WriteLine("  *   *                    *****");
+                        Console.WriteLine("    *                      *****");
+                        Console.WriteLine("***   ***                  *****");
+                    }
+                    else if (input == "paper")
+                    {
+                        Console.WriteLine("LOSE!!!");
+
+                        Console.WriteLine("  *   *                    * * *");
+                        Console.WriteLine("    *                      *   *");
+                        Console.WriteLine("***   ***                  * * *");
+                    }
+
+                    Console.WriteLine("{0}", gamerandom);
+
+                    break;
+
+            }
+
+        }
 
         public static void DiceLogic() 
         {
@@ -112,6 +232,7 @@ namespace DiceRoller
             Dice.Draw(result2);
         }
 
+
         public static void Main(string[] args)
         {
 
@@ -119,7 +240,8 @@ namespace DiceRoller
             bool run = true;
             string option;
             int choice = 2;
-            Console.Write("Would you like to play a game or roll dice?, 1 for game and 2 for rolling dice?\nEnter Selection:");
+            Console.Write("Would you like to play a game or roll dice?, 1 for game, 2 for rolling dice and 3 for Rock Paper Scissors" +
+            	"\nEnter Selection:");
            
             choice  = Convert.ToInt16(Console.ReadLine());
             while (run)
@@ -131,6 +253,8 @@ namespace DiceRoller
 
                 if(choice == 2)
                     DiceLogic();
+                if (choice == 3)
+                    Rockgame();
 
                 Console.Write("again? (type no to quit)\nSelection:");
                 option = Console.ReadLine();
